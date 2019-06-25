@@ -21,7 +21,7 @@ pipeline {
       steps {
        withSonarQubeEnv('Practical Jenkins Sonarqube'){
         sh 'echo "sonar.projectKey=production:sample-php-project" > ${WORKSPACE}/sonar-project.properties'
-        sh 'echo "sonar.sources=." > ${WORKSPACE}/sonar-project.properties'
+        sh 'echo "sonar.sources=src/." > ${WORKSPACE}/sonar-project.properties'
         sh '/opt/sonarqube-scanner/bin/sonar-scanner'
 	}
       }
