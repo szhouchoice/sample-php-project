@@ -22,7 +22,7 @@ pipeline {
         branch 'PR-*'
       }
       steps {
-        sh 'git remote set-url origin git@github.com:szhouchoice/phptest.git'       
+        sh 'git remote set-url origin git@github.com:szhouchoice/sample-php-project.git'       
         sh 'git remote set-braches -add origin ${CHANGE_TARGET}'
         sh 'git fetch origin'
         sh 'git checkout ${CHANGE_TARGET}'
